@@ -1,0 +1,207 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo degradado animado para toda la página */
+body {
+  font-family: 'times new roman', serif;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #c1b89d, #cdcca9, #eff2a3, #a59d83);
+  color: black;
+  background-size: 800% 800%;
+  animation: gradientAnimation 30s ease infinite;
+  color: #030202;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 80px;
+  
+}
+
+@keyframes gradientAnimation {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Contenedor header */
+.container {
+  background-color: rgba(207, 113, 5, 0.85);
+  width: 100%;
+  max-width: 900px;
+  border-radius: 15px;
+  padding: 25px 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+/* Título del header */
+.container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+}
+
+/* Menú de navegación */
+.menu-tabla {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.menu-tabla a {
+  padding: 12px 28px;
+  background-color: #933706;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(13, 31, 44, 0.5);
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.menu-tabla a:hover,
+.menu-tabla a:focus {
+  background-color: #dbbd25;
+  color: #362313;
+  box-shadow: 0 6px 20px #363112;
+  transform: scale(1.1);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Área principal */
+.content {
+  background-color: rgba(139, 30, 30, 0.15);
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 149, 0, 0.4);
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  color: #000000;
+}
+.boton-inicio {
+  display: inline-block;
+  background-color: #ffa600;   
+  color: #161717;              
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 12px rgba(255, 221, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.boton-inicio:hover,
+.boton-inicio:focus {
+  background-color: #247aac; 
+  color: #001a33;
+  transform: scale(1.05);
+  outline: none;
+  cursor: pointer;
+}
+
+fieldset {
+  border: 2px solid #000000;        
+  border-radius: 10px;             
+  padding: 20px;                    
+  margin: 20px 0;                   
+  background-color: #e2d9b1;       
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+  transition: 0.3s ease;
+}
+
+fieldset:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+.content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #080806;
+  text-shadow: 1px 1px 2px #001f3f;
+}
+
+.content p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  background-color: #001f3f;
+  text-align: center;
+  padding: 12px 0;
+  color: #ffdd00;
+  font-weight: 600;
+  box-shadow: 0 -3px 15px rgba(0, 51, 102, 0.7);
+  font-size: 0.9rem;
+  border-radius: 0 0 15px 15px;
+}
+.tabla-datos {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background-color: #dd6b2e;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabla-datos tr:nth-child(even) {
+  background-color: #e4cd83;
+}
+
+.tabla-datos td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #000000;
+}
+
+.tabla-datos td:first-child {
+  font-weight: bold;
+  color: #003366;
+  width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 2.2rem;
+  }
+
+  .menu-tabla a {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
